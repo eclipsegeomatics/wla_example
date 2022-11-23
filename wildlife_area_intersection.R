@@ -51,7 +51,7 @@ rail_length_per_wildlife_area <- railway_int %>%
 # Display results ---
 
 rail_length_per_wildlife_area %>%
-  arrange(rail_length) %>%
+  arrange(-rail_length) %>%
   flextable(col_keys=c("HABITAT_AREA_ID", "rail_length")) %>%
   colformat_double(j=c("rail_length"), digits=2) %>%
   colformat_num(j = c("HABITAT_AREA_ID"), big.mark="") %>%
